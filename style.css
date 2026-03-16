@@ -1,41 +1,391 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Aeonik;
 }
 
-.navbar{
-    height: 70px;
-    background-color: #323232;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px;
+h2{
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo img {
-    padding: 0 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo p {
-    font-size: 20px;
-    font-weight: 600;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 
 .menu a {
-    text-decoration: none;
-    color: white;
-    padding: 0 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
 }
 
 .menu a:last-child {
-    border: 1px solid white;
-    padding: 10px 20px;
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo h1 {
+    color: #cc2727;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (max-width:360px) {
+  .navbar {    
+    height: 57px;
+    background-color: #090707;
+  }
+
+  .logo {
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+}
+
+main {
+  background-color: #090707;
+  padding: 0 100px;
+}
+
+.hero {  
+  background-color: #090707;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.hero .hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+
+}
+
+.hero h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px auto 30px;
+}
+
+.hero p {
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 0 10px 30px;
+  color: white;
+  
+}
+
+.btn-start {
+  background-color: #3775ED;
+  border: 1px solid #3775ED;
+}
+
+.btn-feature {
+  background-color: #2c2c2c;
+  border: 1px solid white;
+}
+
+.website-poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #090707;
+  color: white;
+  padding-top: 50px;
+}
+
+.website-poster h2 {
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.website-poster .poster-box {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 2px solid #282828;
+}
+
+.website-poster .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  height: 307px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.website-poster .box h3 {
+  margin: 15px 0;
+}
+
+.website-poster .box p {
+  line-height: 1.5;
+}
+
+.website-poster .box1 {
+  width: calc(30% - 10px);
+  background-color: #C96408;
+}
+
+.website-poster .box2 {
+  width: calc(33% - 10px);
+  background-color: #7937BB;
+}
+
+.website-poster .box3 {
+  width: calc(33% - 10px);
+  background-color: #3775ED;
+}
+
+.website-poster .box4 {
+  width: 100%;
+  background-color: #1A1919;
+}
+
+.featured-developer {
+  color: white;
+  padding: 50px 0;
+  border-bottom: 2px solid #282828;
+}
+
+.featured-developer .developer-card{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.featured-developer .developer-card img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.featured-developer .developer-card .card-box{
+  height: 308px;
+
+}
+
+.featured-developer .developer-card .card1{
+  background-image: url(./img/bear.png);
+  background-size: cover;
+  position: relative;
+}
+
+.featured-developer .developer-card .card2{
+  background-image: url(./img/women.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.featured-developer .developer-card .card3{
+  background-image: url(./img/red-man.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.featured-developer .developer-card .card4{
+  background-image: url(./img/black-women.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.featured-developer .developer-card .card5{
+  background-image: url(./img/black-man.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.featured-developer .developer-card .card6{
+  background-image: url(./img/vest-man.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.featured-developer .developer-card .card-info{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 8px;
+  background-color: rgba(9,7,7,0.4);
+}
+
+.featured-developer .developer-card .role{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.featured-developer .developer-card .role-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.featured-developer .developer-card .role-logo p{
+  font-size: 10px;
+}
+
+.featured-developer .btn{
+  display: block;
+  margin: 50px auto 0;
+}
+
+.message {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-bottom: 2px solid #282828;
+}
+
+.message .message-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 152px);
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.message .message-box {
+  background-color: rgba(26, 25, 25, 1);
+  border-radius: 5px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message .message-box p {
+  font-size: 14px;
+}
+
+.message .message-box .message-name{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.message .message-box .message-avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.message .message-box1 .message-avatar{
+  background-image: url(./img/people1.jpg);
+}
+
+.message .message-box2 .message-avatar{
+  background-image: url(./img/people2.jpg);
+}
+
+.message .message-box3 .message-avatar{
+  background-image: url(./img/people3.jpg);
+}
+
+.message .message-box4 .message-avatar{
+  background-image: url(./img/people4.jpg);
+}
+
+.message .message-box5 .message-avatar{
+  background-image: url(./img/people5.jpg);
+}
+
+.message .message-box6 .message-avatar{
+  background-image: url(./img/people6.jpg);
+}
+
+.message .message-box7 .message-avatar{
+  background-image: url(./img/people7.jpg);
+}
+
+.message .message-box8 .message-avatar{
+  background-image: url(./img/people8.jpg);
+}
+
+.message .message-box9 .message-avatar{
+  background-image: url(./img/people9.jpg);
+}
+
+.message .hero-banner {
+  width: 100%;
+  height: 400px;
+  background-color: #1A1919;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.join-clubweb {
+  background-color: rgba(55, 117, 237, 1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  border-bottom: 2px solid #282828;
+}
+
+.join-clubweb button {
+  background-color: rgba(26, 25, 25, 1); 
 }
